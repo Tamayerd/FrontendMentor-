@@ -1,0 +1,85 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    background-color: rgb(6, 6, 69);
+    margin-right: 10%;
+ 
+}
+
+.card{
+    width: 75%;
+    height: 70%;
+    color: white;
+    background-color: rgb(19, 43, 73);
+    border-radius: 0.5rem;
+    
+}
+
+.img{
+    width: 90%;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 6%;
+}
+
+.contents{
+    margin-left: 6%;
+}
+.contents p{
+    opacity: 0.5;
+    font-weight: 100;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+.info img{
+    width: 5%;
+    height: 5%;
+}
+.info h4{
+    margin-top: 0%;
+    margin-right: 20%;
+    color: aqua;
+}
+.info h5{
+     margin-top: 0%;
+     margin-right: 10%;
+     font-weight: 100;
+     font-size: smaller;
+     opacity: 0.5;
+}
+hr{
+    width: 85%;
+    opacity: 0.2;
+    border-left: none;
+    border-right: none;
+}
+
+.profile{
+    display: flex;
+
+}
+.profile p{
+    font-size:smaller;
+   margin-left: 5%;
+   margin-top: 3%;
+}
+.p-picture{
+    width: 10%;
+    height: 10%;
+    border-radius: 100%;
+    background-color: white;
+    border-color: white;
+
+}
+.p-picture img{
+    width: 100%;   
+    display: flex;
+    
+}
