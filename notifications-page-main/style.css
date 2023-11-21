@@ -1,0 +1,99 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.list {
+  list-style: none;
+}
+
+.comment-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 1rem;
+  background-color: aliceblue;
+}
+.user-box {
+  border: none;
+  display: flex;
+}
+
+.name {
+  font-weight: 900;
+}
+.message {
+  font-weight: 100;
+}
+.group {
+  font-weight: 900;
+  color: rgb(1, 1, 161);
+}
+.desc {
+  font-weight: 900;
+  opacity: 0.7;
+}
+.time {
+  opacity: 0.5;
+}
+.priv-content {
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  opacity: 0.9;
+  border: 1px solid #8685854b;
+  padding: 1rem;
+}
+
+.img {
+  width: 50px;
+}
+.img img {
+  width: 100%;
+}
+.container {
+  margin-left: 5%;
+}
+.red-dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 0, 0, 0.575);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  opacity: 0.7;
+  margin-left: 15%;
+}
+h1{
+     font-size: x-large;
+}
+#blueCommentsCounter{
+    background-color: rgb(61, 61, 250);
+    border-radius: 5px;
+    font-size: smaller;
+}
+@media (min-width: 768px) {
+    body{
+        background-color: rgba(82, 121, 119, 0.252);
+    }
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1;
+  }
+  h1{
+    margin-left: 5rem;
+   
+
+  }
+  .cont {
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 30%;
+    margin-right: 40%;
+  }
+}

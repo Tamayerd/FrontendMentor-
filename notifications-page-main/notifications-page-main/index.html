@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+<div class="contain">
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body>
+    <div class="cont" >
+      <h1>
+        Notifications
+        <span><button id="markAllAsRead">Mark all as read</button></span>
+      </h1>
+   
+    <div class="list">
+      <div>
+        <div id="comments-list" onclick="removeRedDot(this)"></div>
+      </div>
+    </div>
+    <script src="/data.js"></script>
+</div>
+ </div>
+    <script>
+      function removeRedDot(element) {
+        const redDot = element.querySelector(".red-dot");
+        redDot.style.display = "none";
+      }
+
+    function removeComment(element) {
+  element.style.backgroundColor = "white";
+  const redDot = element.querySelector(".red-dot");
+  redDot.style.display = "none";
+}
+
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const commentsData = getCommentsData();
+        const commentsList = document.getElementById("comments-list");
+        const markAllAsReadButton = document.getElementById("markAllAsRead");
+
+        commentsData.then((data) => {
+          data.forEach((comment) => {
+            const listItem = document.createElement("div");
+            listItem.classList.add("comment-item");
+            const privData = comment.priv ? "priv-content" : "";
+
+            listItem.innerHTML = `
+          <div class="user-box" onclick="removeRedDot(this)">
+            <div class="img"><img src="${comment.img}" alt="User Image"></div>
+            <div class="container">
+              <div class="name">
+                ${comment.user.name}
+                <span class="message">${comment.message}</span>
+                <span class="group">${comment.group}</span>
+                <span class="desc">${comment.desc}</span>
+                <div class="red-dot"></div>
+              </div>
+              <div class="time">${comment.createdAt}</div>
+              <div class="priv ${privData}">${comment.priv}</div>
+            </div>
+          </div>
+        `;
+
+            listItem.addEventListener("click", function () {
+              removeComment(listItem);
+            });
+
+            commentsList.appendChild(listItem);
+          });
+        });
+
+        markAllAsReadButton.addEventListener("click", () => {
+          const commentItems = document.querySelectorAll(".comment-item");
+          commentItems.forEach((item) => {
+            item.style.backgroundColor = "white";
+            const redDot = item.querySelector(".red-dot");
+            redDot.style.display = "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
